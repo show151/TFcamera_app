@@ -159,7 +159,7 @@ class MainActivity : AppCompatActivity() {
         for (i in outputArray.indices step 85) {
             val confidence = outputArray[i + 4]
             if (confidence > 0.7) { // 信頼度が0.7以上の検出結果のみを使用
-                val classId = outputArray[i + 5].toInt()
+                val classId = outputArray[i + 7].toInt()
                 val className = getClassLabel(classId)
                 resultText.append("Detected: $className\n")
             }
